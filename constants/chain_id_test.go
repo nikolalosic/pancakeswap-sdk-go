@@ -10,10 +10,7 @@ func TestChainIDString(t *testing.T) {
 		output ChainID
 	}{
 		{"Mainnet", Mainnet},
-		{"Ropsten", Ropsten},
-		{"Rinkeby", Rinkeby},
-		{"Goerli", Goerli},
-		{"Kovan", Kovan},
+		{"Testnet", Testnet},
 		{"ChainID(2)", ChainID(2)},
 	}
 	for i, test := range tests {

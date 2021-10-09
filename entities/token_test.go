@@ -30,7 +30,7 @@ func TestToken(t *testing.T) {
 
 	// false if chain id differs
 	{
-		token1, err := NewToken(constants.Ropsten, addressOne, 18, "", "")
+		token1, err := NewToken(constants.Testnet, addressOne, 18, "", "")
 		if err != nil {
 			t.Fatal(err)
 		}

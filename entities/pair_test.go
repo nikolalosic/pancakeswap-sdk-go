@@ -57,7 +57,7 @@ func TestPair(t *testing.T) {
 
 	// cannot be used for tokens on different chains
 	{
-		tokenAmountB, _ := NewTokenAmount(WETH[constants.Rinkeby], constants.B100)
+		tokenAmountB, _ := NewTokenAmount(WETH[constants.Testnet], constants.B100)
 		_, output := NewPair(tokenAmountUSDC, tokenAmountB)
 		expect := ErrDiffChainID
 		if expect != output {
@@ -245,8 +245,8 @@ func TestPair(t *testing.T) {
 		}
 
 		{
-			tokenA, _ := NewToken(constants.Rinkeby, common.HexToAddress("0x0000000000000000000000000000000000000001"), 18, "", "")
-			tokenB, _ := NewToken(constants.Rinkeby, common.HexToAddress("0x0000000000000000000000000000000000000002"), 18, "", "")
+			tokenA, _ := NewToken(constants.Testnet, common.HexToAddress("0x0000000000000000000000000000000000000001"), 18, "", "")
+			tokenB, _ := NewToken(constants.Testnet, common.HexToAddress("0x0000000000000000000000000000000000000002"), 18, "", "")
 			tokenAmountA, _ := NewTokenAmount(tokenA, big.NewInt(0))
 			tokenAmountB, _ := NewTokenAmount(tokenB, big.NewInt(0))
 			pair, _ := NewPair(tokenAmountA, tokenAmountB)
