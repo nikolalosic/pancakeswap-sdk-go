@@ -1,4 +1,4 @@
-module github.com/miraclesu/uniswap-sdk-go
+module github.com/nikolalosic/pancakeswap-sdk-go
 
 go 1.15
 

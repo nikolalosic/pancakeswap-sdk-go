@@ -23,7 +23,7 @@ linters-settings:
   gocyclo:
     min-complexity: 15
   goimports:
-    local-prefixes: github.com/miraclesu/uniswap-sdk-go
+    local-prefixes: github.com/nikolalosic/pancakeswap-sdk-go
   golint:
     min-confidence: 0.8
   gomnd:

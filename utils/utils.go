@@ -6,7 +6,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/miraclesu/uniswap-sdk-go/constants"
+	"github.com/nikolalosic/pancakeswap-sdk-go/constants"
 )
 
 // ValidateSolidityTypeInstance determines if a value is a legal SolidityType
