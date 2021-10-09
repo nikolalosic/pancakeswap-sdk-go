@@ -9,8 +9,8 @@ func TestChainIDString(t *testing.T) {
 		expect string
 		output ChainID
 	}{
-		{"Mainnet", Mainnet},
-		{"Testnet", Testnet},
+		{"ChainID(56)", Mainnet},
+		{"ChainID(97)", Testnet},
 		{"ChainID(2)", ChainID(2)},
 	}
 	for i, test := range tests {

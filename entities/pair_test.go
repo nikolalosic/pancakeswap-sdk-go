@@ -16,26 +16,26 @@ func TestGetAddress(t *testing.T) {
 		Output string
 	}{
 		{
-			// CRO,USDC
-			[2]string{"0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b", "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"},
-			"0xeafac2E662Ec23860836Da89d3711BFF0260CD8D",
+			// WBNB,USDC
+			[2]string{"0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c", "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"},
+			"0x06118051f808d91277E6AB68E16450f98D066001",
 		},
 		{
-			// CRO,USDC
+			// WBNB,USDC
 			// cover cache
-			[2]string{"0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b", "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"},
-			"0xeafac2E662Ec23860836Da89d3711BFF0260CD8D",
+			[2]string{"0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c", "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"},
+			"0x06118051f808d91277E6AB68E16450f98D066001",
 		},
 		{
 			// WBTC,DAI
-			[2]string{"0x2260fac5e5542a773aa44fbcfedf7c193bc2c599", "0x6b175474e89094c44da98b954eedeac495271d0f"},
-			"0x231B7589426Ffe1b75405526fC32aC09D44364c4",
+			[2]string{"0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3"},
+			"0xcB85A1505ec138C2b14b12bb1BFd870667Cc45Ac",
 		},
 		{
 			// WBTC,AAVE
 			// cover cache
-			[2]string{"0x2260fac5e5542a773aa44fbcfedf7c193bc2c599", "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9"},
-			"0x48978eF5BeB2d69e27DeF9C046cEbE18Ab5708Ad",
+			[2]string{"0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", "0xfb6115445bff7b52feb98650c87f44907e58f802"},
+			"0x05B1a7F60F23AFE449EF9989526Af81B74F7Dd05",
 		},
 	}
 	for i, test := range tests {
@@ -48,8 +48,8 @@ func TestGetAddress(t *testing.T) {
 
 // nolint funlen
 func TestPair(t *testing.T) {
-	USDC, _ := NewToken(constants.Mainnet, common.HexToAddress("0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"), 18, "USDC", "USD Coin")
-	DAI, _ := NewToken(constants.Mainnet, common.HexToAddress("0x6B175474E89094C44Da98b954EedeAC495271d0F"), 18, "DAI", "DAI Stablecoin")
+	USDC, _ := NewToken(constants.Mainnet, common.HexToAddress("0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d"), 18, "USDC", "USD Coin")
+	DAI, _ := NewToken(constants.Mainnet, common.HexToAddress("0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3"), 18, "DAI", "DAI Stablecoin")
 	tokenAmountUSDC, _ := NewTokenAmount(USDC, constants.B100)
 	tokenAmountDAI, _ := NewTokenAmount(DAI, constants.B100)
 	tokenAmountUSDC101, _ := NewTokenAmount(USDC, big.NewInt(101))
@@ -68,7 +68,7 @@ func TestPair(t *testing.T) {
 	// returns the correct address
 	{
 		output := _PairAddressCache.GetAddress(DAI.Address, USDC.Address)
-		expect := "0xAE461cA67B15dc8dc81CE7615e0320dA1A9aB8D5"
+		expect := "0xadBba1EF326A33FDB754f14e62A96D5278b942Bd"
 		if output.String() != expect {
 			t.Errorf("expect[%+v], but got[%+v]", expect, output)
 		}
