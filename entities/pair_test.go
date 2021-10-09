@@ -6,8 +6,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/miraclesu/uniswap-sdk-go/constants"
-	"github.com/miraclesu/uniswap-sdk-go/utils"
+	"github.com/nikolalosic/pancakeswap-sdk-go/constants"
+	"github.com/nikolalosic/pancakeswap-sdk-go/utils"
 )
 
 func TestGetAddress(t *testing.T) {

@@ -3,7 +3,7 @@ package entities
 import (
 	"fmt"
 
-	"github.com/miraclesu/uniswap-sdk-go/constants"
+	"github.com/nikolalosic/pancakeswap-sdk-go/constants"
 )
 
 var (
@@ -145,7 +145,7 @@ func BestTradeExactIn(
 	currencyAmountIn *TokenAmount,
 	currencyOut *Token,
 	options *BestTradeOptions,
-	// used in recursion.
+// used in recursion.
 	currentPairs []*Pair,
 	originalAmountIn *TokenAmount,
 	bestTrades []*Trade,
@@ -249,7 +249,7 @@ func BestTradeExactOut(
 	currencyIn *Token,
 	currencyAmountOut *TokenAmount,
 	options *BestTradeOptions,
-	// used in recursion.
+// used in recursion.
 	currentPairs []*Pair,
 	originalAmountOut *TokenAmount,
 	bestTrades []*Trade,

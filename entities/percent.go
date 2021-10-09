@@ -3,8 +3,8 @@ package entities
 import (
 	"math/big"
 
-	"github.com/miraclesu/uniswap-sdk-go/constants"
-	"github.com/miraclesu/uniswap-sdk-go/number"
+	"github.com/nikolalosic/pancakeswap-sdk-go/constants"
+	"github.com/nikolalosic/pancakeswap-sdk-go/number"
 )
 
 var (
